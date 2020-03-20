@@ -25,10 +25,11 @@
       <scope>test</scope>
     </dependency>
     <!-- https://mvnrepository.com/artifact/io.netty/netty-all -->
+    <!-- Alpha1/Alpha2 差距很大 -->
     <dependency>
       <groupId>io.netty</groupId>
       <artifactId>netty-all</artifactId>
-      <version>5.0.0.Alpha2</version>
+      <version>5.0.0.Alpha1</version>
     </dependency>
     <!-- https://mvnrepository.com/artifact/org.projectlombok/lombok -->
     <dependency>
@@ -53,6 +54,12 @@
       <groupId>org.jboss.marshalling</groupId>
       <artifactId>jboss-marshalling-serial</artifactId>
       <version>2.0.8.Final</version>
+    </dependency>
+    <!-- https://mvnrepository.com/artifact/javax.activation/activation -->
+    <dependency>
+      <groupId>javax.activation</groupId>
+      <artifactId>activation</artifactId>
+      <version>1.1.1</version>
     </dependency>
 
 

@@ -27,8 +27,8 @@ public class SubReqServer {
                         protected void initChannel(SocketChannel ch) throws Exception {
                             ch.pipeline().addLast(MarshallingCodeCFactory.buildMarshallingDecoder());
                             //
-                            ch.pipeline().addLast(MarshallingCodeCFactory.buildMarshallingEncoder());
-                            ch.pipeline().addLast(new SubReqServerHandler());
+                            ch.pipeline().addLast(MarshallingCodeCFactory.buildMarshallingEncoder())
+                                    .addLast(new SubReqServerHandler());
                         }
                     });
 //                    .childHandler(new ChildChannelHandler());
