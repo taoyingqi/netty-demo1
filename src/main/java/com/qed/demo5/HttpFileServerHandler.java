@@ -82,6 +82,7 @@ public class HttpFileServerHandler extends
             sendError(ctx, HttpResponseStatus.NOT_FOUND);
             return ;
         }
+        // 读取文件的长度
         long len = accessFile.length();
         HttpResponse response = new DefaultHttpResponse(HttpVersion.HTTP_1_1, HttpResponseStatus.OK);
         HttpHeaders.setContentLength(response, len);
@@ -111,6 +112,8 @@ public class HttpFileServerHandler extends
                 }
             }
         });
+        // 如果使用chunked编码，最后需要发送一个编码给结束的空消息体
+        // 将LastHttpContent的EMPTY_LAST_CONTENT发送到缓冲区中，标识所有的消息体已经发送完成
         ChannelFuture lastfuture = ctx.writeAndFlush(LastHttpContent.EMPTY_LAST_CONTENT);
         if(!HttpHeaders.isKeepAlive(request)){
             lastfuture.addListener(ChannelFutureListener.CLOSE);
