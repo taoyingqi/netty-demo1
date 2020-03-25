@@ -20,9 +20,16 @@
 - JBoss Marshalling编解码
 
 ## com.qed.demo5
-《Netty权威指南》10~12章
+## com.qed.demo6
+《Netty权威指南》10章
 - HTTP协议开发应用
+
+## com.qed.demo7
+《Netty权威指南》11章
 - WebSocket协议开发
+
+## com.qed.demo8
+《Netty权威指南》12章
 - UDP协议开发
 - 文件传输
 - 私有协议栈开发

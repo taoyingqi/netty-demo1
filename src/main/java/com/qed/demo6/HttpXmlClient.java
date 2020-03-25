@@ -25,13 +25,13 @@ public class HttpXmlClient {
                         @Override
                         protected void initChannel(SocketChannel ch) throws Exception {
                             // xml解碼器
-                            ch.pipeline().addLast("http-decoder", new HttpResponseDecoder());
-                            ch.pipeline().addLast("http-aggregator", new HttpObjectAggregator(65536));
-                            ch.pipeline().addLast("xml-decoder", new HttpXmlResponseDecoder(Order.class, true));
-                            ch.pipeline().addLast("http-encoder", new HttpRequestEncoder());
-                            // xml編碼器
-                            ch.pipeline().addLast("xml-encoder", new HttpXmlRequestEncoder());
-                            ch.pipeline().addLast("xmlClientHandler", new HttpXmlClientHandler());
+//                            ch.pipeline().addLast("http-decoder", new HttpResponseDecoder());
+//                            ch.pipeline().addLast("http-aggregator", new HttpObjectAggregator(65536));
+//                            ch.pipeline().addLast("xml-decoder", new HttpXmlResponseDecoder(Order.class, true));
+//                            ch.pipeline().addLast("http-encoder", new HttpRequestEncoder());
+//                            // xml編碼器
+//                            ch.pipeline().addLast("xml-encoder", new HttpXmlRequestEncoder());
+//                            ch.pipeline().addLast("xmlClientHandler", new HttpXmlClientHandler());
                         }
                     });
             ChannelFuture f = b.connect(new InetSocketAddress(port)).sync();

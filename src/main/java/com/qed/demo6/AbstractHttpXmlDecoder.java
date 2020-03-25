@@ -6,7 +6,7 @@ import io.netty.handler.codec.MessageToMessageDecoder;
 import java.util.List;
 
 public class AbstractHttpXmlDecoder<T> extends MessageToMessageDecoder<T> {
-    private IBindingFactory factory;
+//    private IBindingFactory factory;
 
 
     @Override
